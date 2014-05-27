@@ -12,7 +12,10 @@ public class DetectWater : MonoBehaviour {
 	{
 		if(other.name == "FireEffect")
 		{
-			//print ("Hit fire!");
+			FireHealth fire;
+			fire = other.GetComponent<FireHealth>();
+
+			fire.PutOutFire(0.1f * Time.deltaTime);
 		}
 	}
 }
